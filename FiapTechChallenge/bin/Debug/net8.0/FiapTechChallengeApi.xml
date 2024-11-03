@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FiapTechChallengeApi</name>
+    </assembly>
+    <members>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.RetornaContatoPelaRegiao(System.String)">
+            <summary>
+            Consulta de contatos por filtro de região
+            </summary>
+            <param name="regiao">O região a ser definido. Valores esperados: Sul, Sudeste, Norte, Nordeste e Centro-Oeste.</param>
+            <returns></returns>        
+            <response code="200">Sucesso na execução ao retornar os contatos</response>        
+            <response code="500">Não foi possível retornar as informações</response>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.RetornaTodosContatos">
+            <summary>
+            Retorna todos os contatos cadastrado
+            </summary>
+            <returns></returns>        
+            <response code="200">Sucesso na execução ao retornar os contatos</response>        
+            <response code="500">Não foi possível retornar as informações</response>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.RetornaContatoPorId(System.Int32)">
+            <summary>
+            Retorna um contato pelo Id cadastrado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.CadastraContato(Core.Input.ContatoInput)">
+            <summary>
+            Cadastra um novo contato na base de dados
+            </summary>
+            <remarks> 
+            Exemplo de requisição:
+            Obs.: Não é necessário enviar o Id nessa requisição
+                {
+                    "Username": "Nome do contato",
+            	    "Password": "Senha do contato",
+            	    "PermissaoSistema": "Tipo de Permissão"
+                }
+            </remarks>
+            <param name="input">Objeto contato</param>
+            <returns>Retorna o contato cadastrado</returns>
+            <response code="201">contato cadastrado na base de dados</response>
+            <response code="400">Falha ao processar a requisição</response>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.Put(Core.Input.ContatoUpdateInput)">
+            <summary>
+            Atualiza um contato por Id
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.ContatoController.DeleteContato(System.Int32)">
+            <summary>
+            Deleta um contato por Id
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.RegiaoContatoController.RetornaTodasRegioes">
+            <summary>
+            Retorna todas as regiões cadastrada
+            </summary>
+            <returns></returns>        
+            <response code="200">Sucesso na execução ao retornar os contatos</response>        
+            <response code="500">Não foi possível retornar as informações</response>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.RegiaoContatoController.RetornaIdPorDDD(System.Int32)">
+            <summary>
+            Retorna a região cadastrada pelo DDD
+            </summary>
+            <param name="ddd"></param>
+            <returns></returns>        
+            <response code="200">Sucesso na execução ao retornar o Id</response>        
+            <response code="500">Não foi possível retornar o Id</response>
+        </member>
+    </members>
+</doc>

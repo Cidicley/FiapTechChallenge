@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FiapTechChallengeApi</name>
+    </assembly>
+    <members>
+        <member name="M:FiapTechChallengeApi.Controllers.AtendimentoController.GetAluno">
+            <summary>
+            Endpoint para retornar os alunos cadastrados - Inicialmente uma Lista em memória
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.AtendimentoController.PostInserirAluno(Core.Models.Aluno)">
+            <summary>
+            Endpoint para cadastrar um aluno - Ínicialmente em Memória
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.AtendimentoController.PutAtualizacaoAluno(Core.Models.Aluno)">
+            <summary>
+            Endpoint para atualizar um aluno - Ínicialmente em Memória
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.AtendimentoController.DeleteAluno(System.String)">
+            <summary>
+            Endpoint para deletar um aluno - Ínicialmente em Memória
+            </summary>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.UsuarioController.RetornaTodosUsuarios">
+            <summary>
+            Necessita de autenticação via token independente da Role
+            </summary>
+            <returns></returns>        
+            <response code="200">Sucesso na execução ao retornar os usuários</response>        
+            <response code="500">Não foi possível retornar as informações</response>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.UsuarioController.RetornaUsuarioPorId(System.Int32)">
+            <summary>
+            Somente usuário do tipo atendimento acessam
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.UsuarioController.DeleteUsuarioPorId(System.Int32)">
+            <summary>
+            Somente usuário do tipo Adm acessam
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FiapTechChallengeApi.Controllers.UsuarioController.CadastraUsuario(Core.Models.Usuario)">
+            <summary>
+            Cadastra um novo usuário na base de dados
+            </summary>
+            <remarks> 
+            Exemplo de requisição:
+            Obs.: Não é necessário enviar o Id nessa requisição
+                {
+                    "Username": "Nome do Usuário",
+            	    "Password": "Senha do Usuário",
+            	    "PermissaoSistema": "Tipo de Permissão"
+                }
+            </remarks>
+            <param name="usuario">Objeto Usuario</param>
+            <returns>Retorna o usuário cadastrado</returns>
+            <response code="201">Usuário cadastrado na base de dados</response>
+            <response code="400">Falha ao processar a requisição</response>
+        </member>
+    </members>
+</doc>
