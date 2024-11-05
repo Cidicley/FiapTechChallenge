@@ -44,7 +44,10 @@ namespace Service
         {
             try
             {
-                regiao = char.ToUpper(regiao[0]) + regiao.Substring(1).ToLower();
+                regiao = regiao.ToLower();
+                
+                TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+                regiao = textInfo.ToTitleCase(regiao);
 
                 //Lazy Loading
                 var todasRegioes = await _regiaoService.ObterTodosAsync();
