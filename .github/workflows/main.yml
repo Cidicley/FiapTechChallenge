@@ -1,0 +1,21 @@
+#Definindo o nome do Workflow
+name: CI / CD Pipeline
+
+#Definindo quando o Workflow será disparado
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+#Definindo os jobs que o Workflow executará
+jobs:
+  test_job:
+    name: Executando o job teste
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v4
+      - name: Executando um comando simples
+        run: echo "Olá mundo! Esta é o nosso primeiro job no Github actions!"
