@@ -17,5 +17,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Executando um comando simples
-        run: echo "Olá mundo! Esta é o nosso primeiro job no Github actions!"
+      - name: Docker Login
+        uses: docker/login-action@v3.3.0
+        with:
+          username: 'cidicley'
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
