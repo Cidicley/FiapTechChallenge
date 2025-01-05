@@ -35,7 +35,8 @@ namespace FiapTechChallenge.Test.Integration
                 {
                     DDD = 11,
                     Estado = "SP",
-                    Regiao = "SUDESTE"
+                    Regiao = "SUDESTE",
+                    Id = 3
                 },
                 Telefone = 123456789,
                 Email = "testcontato@example.com",
