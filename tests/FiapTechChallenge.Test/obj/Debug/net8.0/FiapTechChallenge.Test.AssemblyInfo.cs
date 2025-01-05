@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FiapTechChallenge.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6c039fe039d1b9670366a9c92e7dbd3fe48cfd5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca04d3dcc7342da6c8a711ee3c573f45dbad7e21")]
 [assembly: System.Reflection.AssemblyProductAttribute("FiapTechChallenge.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FiapTechChallenge.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
