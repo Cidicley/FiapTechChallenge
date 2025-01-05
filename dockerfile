@@ -5,6 +5,10 @@ WORKDIR /App
 COPY . ./
 # Restore
 RUN dotnet restore
+
+# Rodar os testes de unidade e integração antes de construir a aplicação
+RUN dotnet test ./tests/FiapTechChallenge.Tests/FiapTechChallenge.Tests.csproj --configuration Release --logger "trx"
+
 # Build and publish a release
 RUN dotnet publish -c Release -o out
 
