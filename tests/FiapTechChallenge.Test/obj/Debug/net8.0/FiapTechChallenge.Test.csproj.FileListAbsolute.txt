@@ -317,3 +317,5 @@ C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechCh
 C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechChallenge.Test\obj\Debug\net8.0\FiapTechChallenge.Test.pdb
 C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechChallenge.Test\obj\Debug\net8.0\FiapTechChallenge.Test.genruntimeconfig.cache
 C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechChallenge.Test\obj\Debug\net8.0\ref\FiapTechChallenge.Test.dll
+C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechChallenge.Test\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Iteam\Documents\Pessoal\FIAP\Projeto\FiapTechChallenge\tests\FiapTechChallenge.Test\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
