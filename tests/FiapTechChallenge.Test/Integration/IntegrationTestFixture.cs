@@ -22,30 +22,30 @@ namespace FiapTechChallenge.Test.Integration
             _contatoRepository = new EFRepository<Contato>(Context);
 
             // Inicializa com dados necessários
-            SeedDatabase().Wait(); // Como é assíncrono, utilizamos .Wait() para aguardar a conclusão
+            //SeedDatabase().Wait(); // Como é assíncrono, utilizamos .Wait() para aguardar a conclusão
         }
 
-        private async Task SeedDatabase()
-        {
-            // Criando e cadastrando um Contato com o repositório
-            var contato = new Contato
-            {
-                Nome = "Test Contato",
-                RegiaoContato = new RegiaoContato
-                {
-                    DDD = 11,
-                    Estado = "SP",
-                    Regiao = "SUDESTE",
-                    Id = 333
-                },
-                Telefone = 123456789,
-                Email = "testcontato@example.com",
+        //private async Task SeedDatabase()
+//{
+//    // Criando e cadastrando um Contato com o repositório
+//    var contato = new Contato
+//    {
+//        Nome = "Test Contato",
+//        RegiaoContato = new RegiaoContato
+//        {   
+//            DDD = 11,
+//            Estado = "SP",
+//            Regiao = "SUDESTE",
+//            Id = 35
+//        },
+//        Telefone = 123456789,
+//        Email = "testcontato@example.com",
 
-            };
+//    };
 
-            // Utilizando o repositório para salvar a entidade
-            await _contatoRepository.CadastrarAsync(contato);
-        }
+//    // Utilizando o repositório para salvar a entidade
+//    await _contatoRepository.CadastrarAsync(contato);
+//}
 
         public void Dispose()
         {
