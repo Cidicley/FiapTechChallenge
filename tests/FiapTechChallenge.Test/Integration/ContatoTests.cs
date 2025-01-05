@@ -158,7 +158,7 @@ namespace FiapTechChallenge.Test.Integration
         public async Task ExcluirContato()
         {
             // Arrange: Criação de um Contato válido            
-            int id = 10;
+            int id = 15;
             var contato = new Contato
             {
                 Id = id,
