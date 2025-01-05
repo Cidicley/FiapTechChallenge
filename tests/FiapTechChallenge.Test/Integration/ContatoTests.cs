@@ -1,4 +1,4 @@
-﻿using Core.Entity;
+using Core.Entity;
 using Core.Interfaces.Repository;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -38,10 +38,12 @@ namespace FiapTechChallenge.Test.Integration
                 Nome = "Contato Teste",
                 Telefone = 987654321,
                 Email = "test@novocontato.com",
-                RegiaoContato = new RegiaoContato {
+                RegiaoContato = new RegiaoContato
+                {
                     DDD = 13,
                     Estado = "SP",
-                    Regiao = "SUDESTE"
+                    Regiao = "SUDESTE",
+                    Id = 6000
                 }
             };
 
@@ -70,7 +72,8 @@ namespace FiapTechChallenge.Test.Integration
                 {
                     DDD = 13,
                     Estado = "SP",
-                    Regiao = "SUDESTE"
+                    Regiao = "SUDESTE",
+                    Id = 4000
                 }
             };
 
@@ -81,7 +84,7 @@ namespace FiapTechChallenge.Test.Integration
             // Assert
             Assert.False(isValid);  // Esperamos que o objeto não seja válido devido ao nome vazio
             Assert.Contains(validationResults, vr => vr.ErrorMessage.Contains("Nome"));  // Verifica se há um erro relacionado ao campo Nome
-            
+
         }
 
         [Fact]
@@ -97,7 +100,8 @@ namespace FiapTechChallenge.Test.Integration
                 {
                     DDD = 13,
                     Estado = "SP",
-                    Regiao = "SUDESTE"
+                    Regiao = "SUDESTE",
+                    Id = 3000
                 }
             };
 
@@ -123,7 +127,7 @@ namespace FiapTechChallenge.Test.Integration
             var contato = new Contato
             {
                 Id = 10,
-                DataCriacao = DateTime.Now,                
+                DataCriacao = DateTime.Now,
                 Nome = "Contato Teste",
                 Telefone = 987654321,
                 Email = "test@novocontato.com",
@@ -133,7 +137,7 @@ namespace FiapTechChallenge.Test.Integration
                     Regiao = "SUDESTE",
                     Estado = "SP",
                     DataCriacao = DateTime.Now,
-                    Id = 100
+                    Id = 2000
                 }
             };
 
@@ -172,7 +176,7 @@ namespace FiapTechChallenge.Test.Integration
                     Regiao = "SUDESTE",
                     Estado = "SP",
                     DataCriacao = DateTime.Now,
-                    Id = 100
+                    Id = 1000
                 }
             };
 
