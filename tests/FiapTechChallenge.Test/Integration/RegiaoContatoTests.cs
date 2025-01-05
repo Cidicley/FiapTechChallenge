@@ -179,13 +179,15 @@ namespace FiapTechChallenge.Test.Integration
         public async Task AtualizacaoRegiaoContato()
         {
             // Arrange: Criação de um RegiaoContato válido
+            int id = 101;
+            
             var regiaoContato = new RegiaoContato
             {   
                 DDD = 11,
                 Regiao = "SUDESTE",
                 Estado = "SP",
                 DataCriacao = DateTime.Now,
-                Id = 100
+                Id = id
             };
 
             await _regiaoContatoRepository.CadastrarAsync(regiaoContato); // Salva no banco
@@ -197,7 +199,7 @@ namespace FiapTechChallenge.Test.Integration
             await _regiaoContatoRepository.AlterarAsync(regiaoContato); // Método que você provavelmente tem no repositório
 
             // Assert: Verifica se o registro foi realmente atualizado
-            var regiaoContatoAtualizado = await _regiaoContatoRepository.ObterPorIdAsync(100);
+            var regiaoContatoAtualizado = await _regiaoContatoRepository.ObterPorIdAsync(id);
 
             Assert.NotNull(regiaoContatoAtualizado);
             Assert.Equal("NORDESTE", regiaoContatoAtualizado.Regiao);
@@ -209,7 +211,7 @@ namespace FiapTechChallenge.Test.Integration
         public async Task ExcluirRegiaoContato()
         {
             // Arrange: Criação de um RegiaoContato válido
-            int id = 2;
+            int id = 20;
 
             var regiaoContato = new RegiaoContato
             {
