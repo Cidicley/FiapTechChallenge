@@ -32,39 +32,6 @@ namespace FiapTechChallenge.Test
             Assert.Equal(ddd, contato.RegiaoContato.DDD);
             Assert.Equal(estado, contato.RegiaoContato.Estado);
             Assert.Equal(regiao, contato.RegiaoContato.Regiao);
-        }
-        //[Fact]
-        //public void RetornaPropriedadesDaClasseContato()
-        //{
-        //    //arrange
-        //    string nome = "Nome";
-        //    int ddd = 11;
-        //    int telefone = 111111111;
-        //    string email = "teste@teste.com";
-        //    string regiao = "Sudeste";
-        //    string estado = "SP";
-
-        //    //ação - act
-        //    Contato contato = new Contato()
-        //    {
-        //        Nome = nome,
-        //        Email = email,
-        //        Telefone = telefone,
-        //        RegiaoContato = new RegiaoContato
-        //        {
-        //            DDD = ddd,
-        //            Estado = estado,
-        //            Regiao = regiao
-        //        }
-        //    };
-
-        //    //validação - assert
-        //    Assert.Equal(nome, contato.Nome);
-        //    Assert.Equal(email, contato.Email);
-        //    Assert.Equal(telefone, contato.Telefone);
-        //    Assert.Equal(ddd, contato.RegiaoContato.DDD);
-        //    Assert.Equal(estado, contato.RegiaoContato.Estado);
-        //    Assert.Equal(regiao, contato.RegiaoContato.Regiao);
-        //}
+        }        
     }
 }
