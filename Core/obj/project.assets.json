@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\FiapTechChallenge\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\Projeto\\FiapTechChallenge\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\FiapTechChallenge\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\Projeto\\FiapTechChallenge\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Iteam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\FiapTechChallenge\\Core\\obj\\",
+      "outputPath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\Projeto\\FiapTechChallenge\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/GrupoSC/GSCLabs-Squad-Portais/_packaging/KraftSales.API.Packages/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {

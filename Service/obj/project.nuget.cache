@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2BjNQIMfac0=",
+  "dgSpecHash": "1BHNx3j8NsI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\FiapTechChallenge\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\Iteam\\Documents\\Pessoal\\FIAP\\Projeto\\FiapTechChallenge\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Iteam\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Iteam\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
