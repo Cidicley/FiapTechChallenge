@@ -30,7 +30,7 @@ jobs:
       # Rodar os testes dentro do contêiner
       - name: Run tests inside Docker container
         run: |
-          docker run --rm my-app dotnet test ./tests/FiapTechChallenge.Tests/FiapTechChallenge.Tests.csproj --configuration Release --logger "trx"
+          docker run --rm my-app dotnet test ./tests/FiapTechChallenge.Test/FiapTechChallenge.Test.csproj --configuration Release --logger "trx"
 
       - name: Build and push Docker images        
         uses: docker/build-push-action@v6.10.0
