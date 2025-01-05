@@ -1,4 +1,4 @@
-﻿using Core.Entity;
+using Core.Entity;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -20,9 +20,10 @@ namespace FiapTechChallenge.Test.Integration
         public async Task CriarRegiaoContatoValido()
         {
             // Arrange
+            int id = 10;
             var regiaoContato = new RegiaoContato
             {
-                Id = 10,
+                Id = id,
                 DDD = 11, // Um valor válido de DDD
                 Regiao = "SUDESTE",
                 Estado = "SP"
@@ -45,8 +46,10 @@ namespace FiapTechChallenge.Test.Integration
         public async Task CriarRegiaoContatoComErroValidoDDDForaDoIntervalo()
         {
             // Arrange
+            int id = 20;
             var regiaoContatoInvalido = new RegiaoContato
             {
+                Id = id,
                 DDD = 100,  // DDD fora do intervalo permitido
                 Regiao = "SUDESTE",
                 Estado = "SP"
@@ -74,14 +77,16 @@ namespace FiapTechChallenge.Test.Integration
                     await _regiaoContatoRepository.CadastrarAsync(regiaoContatoInvalido);
                 });
             }
-        }        
+        }
 
         [Fact]
         public async Task CriarRegiaoContatoComErroValidoRegiaoNomeVazio()
         {
             // Arrange
+            int id = 30;
             var regiaoContatoInvalido = new RegiaoContato
             {
+                Id= id,
                 DDD = 11,
                 Regiao = "",  // Nome da região vazio deve falhar
                 Estado = "SP"
@@ -116,8 +121,10 @@ namespace FiapTechChallenge.Test.Integration
         public async Task CriarRegiaoContatoComErroValidoEstadoNomeVazio()
         {
             // Arrange
+            int id = 40;
             var regiaoContatoInvalido = new RegiaoContato
             {
+                Id = id,
                 DDD = 11,
                 Regiao = "SUDESTE",
                 Estado = ""  // Estado vazio deve falhar
@@ -151,11 +158,13 @@ namespace FiapTechChallenge.Test.Integration
         [Fact]
         public async Task Consulta_RegiaoContato_PorDDD()
         {
+            int id = 50;
             int ddd = 11;
 
             // Arrange: Criação de um RegiaoContato válido
             var regiaoContato = new RegiaoContato
             {
+                Id = id,
                 DDD = ddd,
                 Regiao = "SUDESTE",
                 Estado = "SP"
@@ -164,9 +173,7 @@ namespace FiapTechChallenge.Test.Integration
             await _regiaoContatoRepository.CadastrarAsync(regiaoContato); // Salva no banco
 
             // Act: Consulta pelo DDD
-            IList<RegiaoContato> listaRegiaoCoontado = await _regiaoContatoRepository.ObterTodosAsync();
-
-            RegiaoContato regiaoContatoConsultado = listaRegiaoCoontado.Where(r => r.DDD == ddd).FirstOrDefault();
+            var regiaoContatoConsultado = await _regiaoContatoRepository.ObterPorIdAsync(id);
 
             // Assert: Verifica se o objeto retornado é o que foi inserido
             Assert.NotNull(regiaoContatoConsultado);
@@ -179,10 +186,10 @@ namespace FiapTechChallenge.Test.Integration
         public async Task AtualizacaoRegiaoContato()
         {
             // Arrange: Criação de um RegiaoContato válido
-            int id = 101;
-            
+            int id = 60;
+
             var regiaoContato = new RegiaoContato
-            {   
+            {
                 DDD = 11,
                 Regiao = "SUDESTE",
                 Estado = "SP",
@@ -211,7 +218,7 @@ namespace FiapTechChallenge.Test.Integration
         public async Task ExcluirRegiaoContato()
         {
             // Arrange: Criação de um RegiaoContato válido
-            int id = 20;
+            int id = 70;
 
             var regiaoContato = new RegiaoContato
             {
