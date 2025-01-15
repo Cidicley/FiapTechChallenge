@@ -16,19 +16,7 @@ namespace FiapTechChallenge.Test.Integration
             _context = fixture.Context;
             _contatoRepository = new EFRepository<Contato>(_context);
         }
-
-        //[Fact]
-//public async Task RetornaSucessoAoPesquisarUmEmailCadastradoParaOContatoCriado()
-//{
-//    // Verificando se o Contato foi cadastrado corretamente
-//    var contato = await _context.Contato
-//        .FirstOrDefaultAsync(c => c.Email == "testcontato@example.com");
-
-//    Assert.NotNull(contato); // Verifica se o Contato foi realmente encontrado
-//    Assert.Equal("Test Contato", contato.Nome); // Verifica o Nome
-//    Assert.Equal("testcontato@example.com", contato.Email); // Verifica o E-mail
-//}
-
+        
         [Fact]
         public async Task CriarContatoComSucesso()
         {
