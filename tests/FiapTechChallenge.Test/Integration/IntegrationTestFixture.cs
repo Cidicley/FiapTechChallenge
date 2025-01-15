@@ -20,9 +20,7 @@ namespace FiapTechChallenge.Test.Integration
 
             // Criação da instância do repositório
             _contatoRepository = new EFRepository<Contato>(Context);
-
-            // Inicializa com dados necessários
-            //SeedDatabase().Wait(); // Como é assíncrono, utilizamos .Wait() para aguardar a conclusão
+            
         }
    
 
